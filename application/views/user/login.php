@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Log in</title>
+  <title>Sports Club | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -30,7 +30,8 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Virk</b>Logistic</a>
+    <img src="<?= base_url() ?>/assets/images/sports_club_logo.png" height="150" alt="logo">
+    <!-- <a href="<?= base_url(); ?>"><b>Sports</b>Club</a> -->
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
@@ -79,6 +80,10 @@
       radioClass: 'iradio_square-blue',
       increaseArea: '20%' // optional
     });
+
+    $('html, body').animate({
+        scrollTop: $("login-box-body").offset().top
+    }, 1000);
   });
 </script>
 </body>

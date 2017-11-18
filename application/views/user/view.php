@@ -38,11 +38,8 @@
                           <td><?php echo $value['email']; ?></td>
                           <td><?php echo $value['contact_no']; ?></td>
                           <td>
-                            <?php if($edit_delete['edit']) {?>
                             <a href="<?php echo $base_url; ?>admin/user/edit/<?php echo $value['id']; ?>"><i class="fa fa-edit"></i></a> 
-                            <?php } if($edit_delete['delete']){ ?>
                             <a href="<?php echo $base_url; ?>admin/user/delete/<?php echo $value['id']; ?>"><i class="fa fa-trash"></i></a>
-                            <?php } ?>
                           </td>
                         </tr>
                         <?php } ?>

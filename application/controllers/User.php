@@ -6,15 +6,11 @@ class User extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        
-
 		$this->load->model("user_model");
     }
 
 	public function login()
 	{
-		$this->user_model->check_login("login");
-
         if($this->input->post())
 		{
 			$username = $this->input->post('username',true);
@@ -25,7 +21,6 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-		$this->user_model->check_login("login");
         $data['base_url'] = base_url();
 		$this->load->view('user/login',$data);
 	}
