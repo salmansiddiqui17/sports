@@ -52,7 +52,10 @@
                     <a href="#ev-po"><img src="<?= base_url(); ?>assets/frontend/images/icon/f6.png" alt=""> Events</a>
                 </li>
                 <li>
-                    <a href="#"><img src="<?= base_url(); ?>assets/frontend/images/icon/r2.png" alt=""> Register</a>
+                    <a href="#register"><img src="<?= base_url(); ?>assets/frontend/images/icon/r2.png" alt=""> Register</a>
+                </li>
+                <li>
+                    <a href="#about"><img src="<?= base_url(); ?>assets/frontend/images/icon/about.png" alt=""> About</a>
                 </li>				
                 <li>
                     <a href="#contact"><img src="<?= base_url(); ?>assets/frontend/images/icon/contact.png" alt=""> Contact Us</a>
@@ -85,9 +88,9 @@
 			<!-- TOP FIXED MENU -->
             <div class="i-head-right i-head-com col-md-6 col-sm-12 col-xs-12" >
                 <ul>
-                    <li class="top-scal-1"><a href="cricket-event-register.html"><i class="fa fa-registered" aria-hidden="true"></i> Player registration</a>
+                    <li class="top-scal-1"><a href="#register"><i class="fa fa-registered" aria-hidden="true"></i> Player registration</a>
                     </li>
-                    <li class="top-scal"><a href="cricket-booking.html"><i class="fa fa-key" aria-hidden="true"></i> Login</a>
+                    <li class="top-scal"><a href="<?= base_url(); ?>user"><i class="fa fa-key" aria-hidden="true"></i> Login</a>
                     </li>
                 </ul>
             </div>

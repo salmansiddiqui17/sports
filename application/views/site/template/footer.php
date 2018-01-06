@@ -5,7 +5,7 @@
                 <!--SECTION: FOOTER-->
                 <div class="row">
                     <div class="col-md-12 foot1">
-                        <a href="#"><img src="<?= base_url(); ?>assets/frontend/images/cricket-logo.png" alt="">
+                        <a href="#"><img src="<?= base_url(); ?>assets/frontend/images/logo.png" alt="">
                         </a>
                         <ul>
                             <li><span>10,231,124</span> Community Members</li>

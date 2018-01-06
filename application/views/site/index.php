@@ -4,7 +4,7 @@
         <div class="home" id="home">
             <div class="h_l">
                 <!-- BRAND LOGO AND EVENT NAMES -->
-                <img src="<?= base_url(); ?>assets/frontend/images/cricket-logo.png" alt="" />
+                <img src="<?= base_url(); ?>assets/frontend/images/logo.png" alt="" />
                 <br><br>
                 <p>Becoming a gym certified personal cricket trainer is your foundation for success. gym is the only personal trainer certification program that integrates a complete approach to cricket, wellness and business skills.</p>
                 <h2>Current cricket Events</h2>
@@ -68,7 +68,7 @@
                                                 <h4><?= $value['name'] ?></h4><span><?= date('F d, Y',strtotime($value['start_date'])) ?></span>
                                             </div>
                                         </td>
-                                        <td><a href="team-register.html" class="link-btn reg-btn">Register Now</a>
+                                        <td><a href="#register" class="link-btn reg-btn">Register Now</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -110,8 +110,92 @@
         </div>
     </section>
 
+    <!-- REGISTER MY INFORMATION -->
+    <section id="register">
+        <div class="booking-bg-s lp">
+            <div class="booking-bg-1">
+                <div class="bg-book">
+                    <div class="spe-title-1 spe-title-wid">
+                        <h2>Register yourself <span>Now!</span> </h2>
+                        <div class="hom-tit">
+                            <div class="hom-tit-1"></div>
+                            <div class="hom-tit-2"></div>
+                            <div class="hom-tit-3"></div>
+                        </div>
+                        <p>Feel the thrill of seeing a global sporting event in one of the world's most incredible cities.</p>
+                    </div>
+                    <div class="book-succ">Thank you for Register with us we will get back to you soon.</div>
+                    <div class="book-form">
+                        <form id="tr_form" name="tr_form" class="form-horizontal" action="<?= base_url() ?>site/save" method="post">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Applicant name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="First Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Father name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="f_name" name="f_name" class="form-control" placeholder="Father Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">CNIC</label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="cnic" name="cnic" class="form-control" placeholder="CNIC #" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Age / Gender</label>
+                                <div class="col-sm-5">
+                                    <input type="text" id="age" name="age" class="form-control" placeholder="Age" required>
+                                </div>
+                                <div class="col-sm-5">
+                                    <select type="text" id="gender" name="gender" class="form-control" required>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Player Strength</label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="type" name="type" class="form-control" placeholder="e.g: Bowler, Batsman" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Sports Club</label>
+                                <div class="col-sm-10">
+                                    <select id="club" name="club" class="form-control" >
+                                        <option value="">Select Club</option>
+                                        <?php
+                                            foreach ($clubs as $key => $value) {
+                                                echo "<option value='$value[name]'>$value[name]</option>";
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Contact #</label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="contacts" name="contact" class="form-control" placeholder="Contact no" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <input type="submit" value="submit" id="send_button">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SECTION: TRAINING -->
-    <section>
+    <section id="about">
         <div class="training img-pag-about">
             <div class="tr-pro">
                 <div class="inn-title">
