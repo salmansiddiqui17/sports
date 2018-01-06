@@ -9,9 +9,9 @@
             <!-- /.box-header -->
             <div class="box-body">
               <div class="row">
-                <div class="col-md-12">
+                <!-- <div class="col-md-12">
                     <a href="<?= base_url() ?>players/add" class="btn btn-primary"><span class="fa fa-plus"></span> Add Player</a>
-                </div>
+                </div> -->
               </div><br>
                 <table id="example2" class="table table-bordered table-hover">
                     <thead>
@@ -23,6 +23,7 @@
                           <th>Age</th>
                           <th>Gender</th>
                           <th>Player Type</th>
+                          <th>Club</th>
                           <th>Contact</th>
                           <th>Actions</th>
                         </tr>
@@ -38,10 +39,10 @@
                           <td><?php echo $value['age']; ?></td>
                           <td><?php echo $value['gender']; ?></td>
                           <td><?php echo $value['type']; ?></td>
+                          <td><?php echo $value['club']; ?></td>
                           <td><?php echo $value['contact']; ?></td>
                           <td>
-                            <a href="<?php echo $base_url; ?>players/edit/<?php echo $value['id']; ?>"><i class="fa fa-edit"></i></a> 
-                            <a href="<?php echo $base_url; ?>players/delete/<?php echo $value['id']; ?>"><i class="fa fa-trash"></i></a>
+                            <a href="<?php echo $base_url; ?>players/delete/<?php echo $value['id']; ?>" title="reject"><i class="fa fa-ban text-danger"></i></a>
                           </td>
                         </tr>
                         <?php } ?>

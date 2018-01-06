@@ -56,7 +56,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="<?= base_url() ?>Tournaments/view"><i class="fa fa-circle-o"></i> View Tournaments</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Match Schedules</a></li>
+            <li><a href="<?= base_url() ?>Tournaments/matches"><i class="fa fa-circle-o"></i> Match Schedules</a></li>
           </ul>
         </li>
       </ul>

@@ -29,7 +29,7 @@ class Teams extends CI_Controller {
             }
         }
         
-        $data['page']='Teams/view';
+        $data['page']='teams/view';
         $this->load->view('Template/main',$data);
 	}
 

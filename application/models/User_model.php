@@ -29,7 +29,7 @@ class User_model extends CI_Model {
     public function logout()
 	{
         $this->session->admin = '';
-        redirect("user/index","refresh");
+        redirect("site","refresh");
 	}
     
     public function check_login()
