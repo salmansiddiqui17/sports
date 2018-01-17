@@ -22,6 +22,8 @@ class Site extends CI_Controller {
 						   join('teams as team2','team2.id=matches.team2')->
 						   join('tournaments','tournaments.id=matches.tour_id')->
 						   get('matches')->result_array();
+		$data['clubs'] = $this->db->get('clubs')->result_array();
+		
  		$this->load->view('site/index',$data);		
 	}
 

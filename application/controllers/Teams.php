@@ -16,9 +16,10 @@ class Teams extends CI_Controller {
         $data['base_url'] = base_url();
         $data['userInfo'] = $this->userInfo;
 
-        $this->db->select("*"); 
+        $this->db->select("teams.*,clubs.name as club_name"); 
         $this->db->from('teams');
-        $this->db->where("is_delete","0");
+        $this->db->join('clubs','teams.club=clubs.id');
+        $this->db->where("teams.is_delete","0");
         $data['teams'] = $this->db->get()->result_array();
 
         foreach ($data['teams'] as $key => $team) {
@@ -38,6 +39,7 @@ class Teams extends CI_Controller {
         $data['base_url'] = base_url();
         $data['userInfo'] = $this->userInfo;
         $data['players'] = $this->db->where('is_delete',0)->get('players')->result_array();
+        $data['clubs'] = $this->db->get('clubs')->result_array();
         
         $data['page']='teams/add';
         $this->load->view('Template/main',$data);
@@ -64,6 +66,7 @@ class Teams extends CI_Controller {
         $data['team'] = $this->db->get()->row_array();
 
         $data['players'] = $this->db->where('is_delete',0)->get('players')->result_array();
+        $data['clubs'] = $this->db->get('clubs')->result_array();
         
         $data['page']='teams/edit';
         $this->load->view('Template/main',$data);

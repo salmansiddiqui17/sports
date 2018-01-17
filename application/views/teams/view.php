@@ -31,6 +31,7 @@
                           <td><?php echo $value['name']; ?></td>
                           <td><?php echo $value['coach']; ?></td>
                           <td><?php echo $value['p_names']; ?></td>
+                          <td><?php echo $value['club_name']; ?></td>
                           <td>
                             <a href="<?php echo $base_url; ?>teams/edit/<?php echo $value['id']; ?>"><i class="fa fa-edit"></i></a> 
                             <a href="<?php echo $base_url; ?>teams/delete/<?php echo $value['id']; ?>"><i class="fa fa-trash"></i></a>

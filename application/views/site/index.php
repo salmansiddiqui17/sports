@@ -47,6 +47,39 @@
     <section class="ev-po" id="ev-po">
         <div class="lp">
             <div class="row">
+                <div class="col-md-12 eve-res">
+                    <div class="events ev-po-2 ev-po-com">
+                        <div class="ev-po-title pag-cri-inn-combg">
+                            <h3>Match Schedule</h3>
+                            <p>Recent & Upcoming matches and status</p>
+                        </div>
+                        <table class="myTable">
+                            <tbody>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Tournament</th>
+                                    <th>Teams</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Winning Team</th>
+                                </tr>
+                                <?php foreach ($matches as $key => $value): ?>
+                                    <tr>
+                                        <td><?= $key+1 ?></td>
+                                        <td><?= $value['t_name'] ?></td>
+                                        <td><?= $value['t1_name']." <b>vs</b> ".$value['t2_name'] ?></</td>
+                                        <td><?= date('d-m-y',strtotime($value['date'])) ?></</td>
+                                        <td><?= ($value['status']==1?"Upcoming":"Completed") ?></</td>
+                                        <td><?= ($value['winning_team']==0?"-":$this->tm->getTeamName($value['winning_team'])) ?></</td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
                 <div class="col-md-6 eve-res">
                     <div class="events ev-po-1 ev-po-com">
                         <div class="ev-po-title pag-cri-inn-combg1">
@@ -77,29 +110,28 @@
                     </div>
                 </div>
                 <div class="col-md-6 eve-res">
-                    <div class="events ev-po-2 ev-po-com">
-                        <div class="ev-po-title pag-cri-inn-combg">
-                            <h3>Match Schedule</h3>
-                            <p>Recent & Upcoming matches and status</p>
+                    <div class="events ev-po-1 ev-po-com">
+                        <div class="ev-po-title pag-cri-inn-combg1">
+                            <h3>Cricket Clubs</h3>
+                            <p>All</p>
                         </div>
                         <table class="myTable">
                             <tbody>
                                 <tr>
                                     <th>#</th>
-                                    <th>Tournament</th>
-                                    <th>Teams</th>
-                                    <th>Date</th>
-                                    <th>Status</th>
-                                    <th>Winning Team</th>
+                                    <th>Club Name</th>
+                                    <th>Location</th>
                                 </tr>
-                                <?php foreach ($matches as $key => $value): ?>
+                                <?php foreach ($clubs as $key => $value): ?>
                                     <tr>
                                         <td><?= $key+1 ?></td>
-                                        <td><?= $value['t_name'] ?></td>
-                                        <td><?= $value['t1_name']." <b>vs</b> ".$value['t2_name'] ?></</td>
-                                        <td><?= date('d-m-y',strtotime($value['date'])) ?></</td>
-                                        <td><?= ($value['status']==1?"Upcoming":"Completed") ?></</td>
-                                        <td><?= ($value['winning_team']==0?"-":$this->tm->getTeamName($value['winning_team'])) ?></</td>
+                                        <td><img src="<?= base_url(); ?>assets/frontend/images/coun/t10.png" alt="">
+                                            <div class="h-tm-ra1">
+                                                <h4><?= $value['name'] ?></h4>
+                                            </div>
+                                        </td>
+                                        <td><a href="#register" class="link-btn reg-btn">Apply Now</a>
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

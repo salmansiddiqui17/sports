@@ -25,6 +25,21 @@
                           <input id="name" class="form-control col-md-7 col-xs-12" value="<?= $team['coach'] ?>" name="coach" placeholder="Team Coach Name" required="required" type="text">
                         </div>
                       </div>
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Club <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select id="club" class="form-control col-md-7 col-xs-12" name="club" required="required">
+                              <option value="">Select Club</option>
+                              <?php
+                                  foreach ($clubs as $key => $value) {
+                                    echo "<option value='$value[id]' ".($value['id']==$team['club']?"selected":"")." >$value[name]</option>";
+                                  }
+                              ?>
+                          </select>
+                        </div>
+                      </div>
                       
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Players <span class="required">*</span>
