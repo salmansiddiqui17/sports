@@ -28,12 +28,6 @@
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook fb1"></i></a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-twitter tw1"></i></a>
-                                </li>
-                                <li><a href="#"><i class="fa fa-google-plus gp1"></i></a>
-                                </li>
-                                <li><a href="#"><i class="fa fa-envelope-o sh1"></i></a>
-                                </li>
                             </ul>
                         </div>
                     </div>
