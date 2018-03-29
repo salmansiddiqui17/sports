@@ -52,6 +52,9 @@
                     <a href="#ev-po"><img src="<?= base_url(); ?>assets/frontend/images/icon/f6.png" alt=""> Events</a>
                 </li>
                 <li>
+                    <a href="#teams"><img src="<?= base_url(); ?>assets/frontend/images/icon/f6.png" alt=""> Teams</a>
+                </li>
+                <li>
                     <a href="#register"><img src="<?= base_url(); ?>assets/frontend/images/icon/r2.png" alt=""> Register</a>
                 </li>
                 <li>
