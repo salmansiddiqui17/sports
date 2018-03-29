@@ -139,6 +139,39 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12 eve-res">
+                    <div class="teams ev-po-2 ev-po-com">
+                        <div class="ev-po-title pag-cri-inn-combg">
+                            <h3>Teams</h3>
+                            <p>All teams and their players</p>
+                        </div>
+                        <table class="myTable">
+                            <tbody>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Team Name</th>
+                                    <th>Coach</th>
+                                    <th>Players</th>
+                                    <th>Club</th>
+                                </tr>
+                                <?php foreach ($teams as $key => $value): ?>
+                                    <tr>
+                                        <td><?= $key+1 ?></td>
+                                        <td><?= $value['name'] ?></td>
+                                        <td><?= $value['coach'] ?></</td>
+                                        <td><?php foreach ($value['players'] as $k => $v) {
+                                            echo $v['name'].",";
+                                        } ?></</td>
+                                        <td><?php echo $this->db->where('id',$value['club'])->get('clubs')->row_array()['name']; ?></</td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -22,7 +22,10 @@ class Site extends CI_Controller {
 						   join('teams as team2','team2.id=matches.team2')->
 						   join('tournaments','tournaments.id=matches.tour_id')->
 						   get('matches')->result_array();
-		$data['clubs'] = $this->db->get('clubs')->result_array();
+		$data['teams'] = $this->db->get('teams')->result_array();
+		foreach ($data['teams'] as $key => $value) {
+			$data['teams'][$key]['players'] = $this->db->select('name')->where_in('id',explode(',',$value['players']))->get('players')->result_array();
+		}
 		
  		$this->load->view('site/index',$data);		
 	}
